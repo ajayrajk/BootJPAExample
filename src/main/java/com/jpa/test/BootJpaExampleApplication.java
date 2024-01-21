@@ -19,6 +19,7 @@ public class BootJpaExampleApplication {
 	    user.setName("Ajay Kumar Rajput");
 	    user.setCity("Farrukhabad");
 	    user.setStatus("I am a programmer");
+	    // save user to our database 
 	    User user1=userRepository.save(user);
 	    System.out.println(user1);
 	
