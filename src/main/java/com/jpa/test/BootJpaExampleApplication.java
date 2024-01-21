@@ -67,12 +67,19 @@ public class BootJpaExampleApplication {
 //	    
 	    //use of custom finder methods or Derived method
 	    
-	   List<User> users= userRepository.findbyName("Ajay");
-	    users.forEach(user->System.out.println(user));
+	  // List<User> users= userRepository.findbyName("Ajay");
+	  //  users.forEach(user->System.out.println(user));
 	    
-	    
-	    
-	    
+	  List<User> user= userRepository.getAllUser();
+	  user.forEach(u->System.out.println(u));
+	  
+	  List<User> userByName=userRepository.getUserByName("Ajay");
+	  
+	  userByName.forEach(u->System.out.println(u));
+	      
+	  
+	  System.out.println("-------------------------");
+	  userRepository.getUser().forEach(u->System.out.println(u));
 	    
 	}
 
