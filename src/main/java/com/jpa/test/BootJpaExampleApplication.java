@@ -6,11 +6,13 @@ import java.util.Optional;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.jpa.test.dao.UserRepository;
 import com.jpa.test.entities.User;
 
 @SpringBootApplication
+@EnableJpaRepositories
 public class BootJpaExampleApplication {
   
 	public static void main(String[] args) {
@@ -63,10 +65,15 @@ public class BootJpaExampleApplication {
 //	    userRepository.deleteById(52);
 //	    System.out.println("deleted user");
 //	    
+	    //use of custom finder methods or Derived method
 	    
 	   List<User> users= userRepository.findbyName("Ajay");
-	    
 	    users.forEach(user->System.out.println(user));
+	    
+	    
+	    
+	    
+	    
 	}
 
 }
