@@ -60,12 +60,13 @@ public class BootJpaExampleApplication {
 //	    System.out.println("Saved user" +result);
 
 	    //delete by ID 
-	    userRepository.deleteById(52);
-	    System.out.println("deleted user");
+//	    userRepository.deleteById(52);
+//	    System.out.println("deleted user");
+//	    
 	    
+	   List<User> users= userRepository.findbyName("Ajay");
 	    
-	    
-	    
+	    users.forEach(user->System.out.println(user));
 	}
 
 }
